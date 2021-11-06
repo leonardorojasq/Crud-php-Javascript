@@ -121,7 +121,7 @@ $(window).load(function() {
     }
     $contenido .= "\r\n\r\n/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;\r\n/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;\r\n/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;";
 
-    # Se guardará dependiendo del directorio, en una carpeta llamada respaldos
+    # Aqui va l acarpeta de respaldo
     $carpeta = __DIR__ . "/respaldos";
     if (!file_exists($carpeta)) {
         mkdir($carpeta);
@@ -143,7 +143,7 @@ $(window).load(function() {
 exportarTablas("localhost", "root", "12345678", "bdunad46"); 
 
 ?>
-	<h4 class="titulo">Copia de seguridad creada</h4>
+	<h4 class="titulo" style="color: green;">Copia de seguridad creada</h4>
   <!--  End-->
 <!--  Bootstrap JS -->
 <script src="js/bootstrap.js"></script>
