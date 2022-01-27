@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Inicio Fase3</title>
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+</head>
+<body>
+<div ><img src="img/logo.jpg" style="width: 100%; height: auto" alt="logo-pcelectronics"></div>
+ <!-------------------------------INICIO MENU-------------------------------------------------->
+ <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgba(255,150,0,1.00);">
+  <div class="container-fluid">
+  
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Administrador</a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="crearbd.php">Crear Base de Datos</a></li>
+            <li><a class="dropdown-item" href="creartabla.php">Crear Tabla</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="pdf/generarpdf.php">Generar reporte PDF</a></li>
+			  <li><a class="dropdown-item" href="respaldo.php">Generar Backup</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#"  role="button" data-bs-toggle="dropdown" aria-expanded="false">Inventarios</a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="ingresar.php">Ingresar</a></li>
+            <li><a class="dropdown-item" href="actualizar.php">Actualizar</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="eliminar.php">Eliminar</a></li>
+			  <li><a class="dropdown-item" href="consultar.php">Consultar</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Utilidades
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="utilidades.html">Utilidades</a></li>
+            <li><a class="dropdown-item" href="conversion.html">Equivalencias entre Datos</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#"></a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!----------------------------------------FIN MENU--------------------------------------------->
+
+	<h3 class="espacio-top"><center>Convertir Byte, Kilobyte, Megabyte, Gigabyte</center></h3>
+	
+<div>
+    <center class="espacio-top">
+        <input type="number" id="input" placeholder="Ingrese un numero" required autofocus>
+    </center>
+</div>
+	
+	<div>
+    <center class="espacio-top">
+        <select id="s1" onChange="convertir()" >
+		<!--option value="">Elija una opcion</option--->
+			<option value="">Elija una opcion</option>
+			<option value="B">Byte</option>
+			<option value="K">KiloByte</option>
+			<option value="M">MegaByte</option>
+			<option value="G">GigaByte</option>
+			<option value="T">TeraByte</option>
+		</select>
+    </center>
+</div>
+<div class="selec">
+    <center>
+        <select id="s2" onChange="convertir()">
+		<option value="">Elija una opcion</option>
+			<option value="BB">Byte</option>
+			<option value="KB">KiloByte</option>
+			<option value="MB">MegaByte</option>
+			<option value="GB">GigaByte</option>
+			<option value="TB">TeraByte</option>
+		</select>
+    </center>
+</div>	
+<div>
+    <center class="selec">
+        <button onclick="convertir()" class="btn btn-primary">Convertir</button>
+    </center>
+</div>
+<center>
+    <div>
+        <label></label> <label id="resultado"></label>
+    </div>
+</center>
+
+	
+	
+<!--  Bootstrap JS -->
+<script src="js/conversion.js"></script>	
+<script src="js/bootstrap.js"></script>
+</body>
+</html>
